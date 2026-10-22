@@ -1,15 +1,27 @@
-Welcome to your new dbt project!
+# 🛒 E-Commerce dbt Analytics Project
 
-### Using the starter project
+An end-to-end data transformation and modeling project built using **dbt Core** and **Snowflake**, designed for modern e-commerce analytics.
 
-Try running the following commands:
-- dbt run
-- dbt test
+---
 
+## 🚀 Tech Stack & Tools
+* **Data Transformation:** dbt Core (v1.13)
+* **Data Warehouse:** Snowflake
+* **Language:** SQL, Jinja
+* **Version Control:** Git & GitHub
 
-### Resources:
-- Learn more about dbt [in the docs](https://docs.getdbt.com/docs/introduction)
-- Check out [Discourse](https://discourse.getdbt.com/) for commonly asked questions and answers
-- Join the [chat](https://community.getdbt.com/) on Slack for live discussions and support
-- Find [dbt events](https://events.getdbt.com) near you
-- Check out [the blog](https://blog.getdbt.com/) for the latest news on dbt's development and best practices
+---
+
+## 📁 Project Structure
+
+```text
+ecommerce_dbt/
+├── analyses/         # Ad-hoc SQL queries and analysis
+├── macros/           # Reusable SQL snippets (Jinja macros)
+├── models/           # Transformation models (Staging & Marts)
+│   ├── staging/      # Initial cleaning and renaming
+│   └── marts/        # Business-ready dimensional models
+├── seeds/            # CSV files loaded directly into Snowflake
+├── snapshots/        # Slowly Changing Dimensions (SCD Type 2)
+├── tests/            # Custom data tests and assertions
+└── dbt_project.yml   # Main project configuration file
